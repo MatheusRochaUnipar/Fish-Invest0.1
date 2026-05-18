@@ -1,0 +1,9 @@
+br\unipar\fish\invest\domains\Investimento.class
+br\unipar\fish\invest\repositories\UsuarioRepository.class
+br\unipar\fish\invest\exceptions\BusinessException.class
+br\unipar\fish\invest\domains\Usuario.class
+br\unipar\fish\invest\services\UsuarioService.class
+br\unipar\fish\invest\domains\Aporte.class
+br\unipar\fish\invest\FishInvest.class
+br\unipar\fish\invest\domains\BaseEntity.class
+br\unipar\fish\invest\services\impl\UsuarioServiceImpl.class
