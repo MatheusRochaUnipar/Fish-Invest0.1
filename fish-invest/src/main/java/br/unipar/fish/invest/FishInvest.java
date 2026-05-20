@@ -17,40 +17,7 @@ public class FishInvest {
 
     public static void main(String[] args) {
 
-        UsuarioService service =
-                new UsuarioServiceImpl();
-
-        Usuario usuario = new Usuario(
-                "Matheus",
-                "matheus@gmail.com",
-                "matheus123",
-                1000.0,
-                true
-        );
-
-        try {
-
-            service.cadastrar(usuario);
-
-            Usuario login =
-                    service.login(
-                            "matheus@gmail.com",
-                            "matheus123"
-                    );
-
-            System.out.println(
-                    "LOGIN REALIZADO"
-            );
-
-            System.out.println(
-                    login.getNome()
-            );
-
-        } catch (Exception e) {
-
-            System.out.println(
-                    e.getMessage()
-            );
-        }
+    
     }
+   
 }
