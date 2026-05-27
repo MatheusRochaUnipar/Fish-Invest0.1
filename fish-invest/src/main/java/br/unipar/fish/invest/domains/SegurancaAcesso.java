@@ -10,20 +10,17 @@ import java.time.LocalDate;
  *
  * @author user
  */
-public class SegurancaAcesso extends BaseEntity{
+public class SegurancaAcesso{
+    
     private String pinAcesso;
     private Boolean biometriaAtiva;
-    private LocalDate dataCadastro;
 
     public SegurancaAcesso() {
-        super();
     }
 
     public SegurancaAcesso(String pinAcesso, Boolean biometriaAtiva, LocalDate dataCadastro, Integer id) {
-        super(id);
         this.pinAcesso = pinAcesso;
         this.biometriaAtiva = biometriaAtiva;
-        this.dataCadastro = dataCadastro;
     }
 
     public String getPinAcesso() {
@@ -42,19 +39,9 @@ public class SegurancaAcesso extends BaseEntity{
         this.biometriaAtiva = biometriaAtiva;
     }
 
-    public LocalDate getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(LocalDate dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
     @Override
     public String toString() {
-        return "SegurancaAcesso{" + "pinAcesso=" + pinAcesso + ", biometriaAtiva=" + biometriaAtiva + ", dataCadastro=" + dataCadastro + '}';
+        return "SegurancaAcesso{" + "pinAcesso=" + pinAcesso + ", biometriaAtiva=" + biometriaAtiva + '}';
     }
-    
-    
-    
+   
 }

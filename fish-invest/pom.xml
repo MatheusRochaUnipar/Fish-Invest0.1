@@ -10,4 +10,14 @@
         <maven.compiler.release>25</maven.compiler.release>
         <exec.mainClass>br.unipar.fish.invest.FishInvest</exec.mainClass>
     </properties>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
+    </dependencies>
+
+    
 </project>

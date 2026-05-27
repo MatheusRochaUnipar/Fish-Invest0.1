@@ -4,6 +4,7 @@
  */
 package br.unipar.fish.invest.domains;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 /**
@@ -13,42 +14,34 @@ import java.time.LocalDate;
  */
 public class TransacoesEDepositos extends BaseEntity {
 
-   
-    private CarteiraInvestimentos carteira;
-    private double  valorTransacao;
-    private String  tipoOperacao;
-    private String  metodoPagamento;
-    private LocalDate   dataTransacao;
-    private String  statusOperacao;
+    private BigDecimal valorTransacao;
+    private String tipoOperacao;
+    private String metodoPagamento;
+    private LocalDate dataTransacao;
+    private String statusOperacao;
+    
+    private Cliente cliente;
 
-  
-    public TransacoesEDepositos() {
-        super();
-    }
+    private CarteiraInvestimentos carteiraInvestimentos;
 
-    public TransacoesEDepositos(CarteiraInvestimentos carteira, double valorTransacao, String tipoOperacao, String metodoPagamento, LocalDate dataTransacao, String statusOperacao, Integer id) {
+    public TransacoesEDepositos() {}
+
+    public TransacoesEDepositos(BigDecimal valorTransacao, String tipoOperacao, String metodoPagamento, LocalDate dataTransacao, String statusOperacao, Cliente cliente, CarteiraInvestimentos carteiraInvestimentos, Integer id) {
         super(id);
-        this.carteira = carteira;
         this.valorTransacao = valorTransacao;
         this.tipoOperacao = tipoOperacao;
         this.metodoPagamento = metodoPagamento;
         this.dataTransacao = dataTransacao;
         this.statusOperacao = statusOperacao;
+        this.cliente = cliente;
+        this.carteiraInvestimentos = carteiraInvestimentos;
     }
 
-    public CarteiraInvestimentos getCarteira() {
-        return carteira;
-    }
-
-    public void setCarteira(CarteiraInvestimentos carteira) {
-        this.carteira = carteira;
-    }
-
-    public double getValorTransacao() {
+    public BigDecimal getValorTransacao() {
         return valorTransacao;
     }
 
-    public void setValorTransacao(double valorTransacao) {
+    public void setValorTransacao(BigDecimal valorTransacao) {
         this.valorTransacao = valorTransacao;
     }
 
@@ -84,11 +77,28 @@ public class TransacoesEDepositos extends BaseEntity {
         this.statusOperacao = statusOperacao;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public CarteiraInvestimentos getCarteiraInvestimentos() {
+        return carteiraInvestimentos;
+    }
+
+    public void setCarteiraInvestimentos(CarteiraInvestimentos carteiraInvestimentos) {
+        this.carteiraInvestimentos = carteiraInvestimentos;
+    }
+
     @Override
     public String toString() {
-        return "TransacoesEDepositos{" + "carteira=" + carteira + ", valorTransacao=" + valorTransacao + ", tipoOperacao=" + tipoOperacao + ", metodoPagamento=" + metodoPagamento + ", dataTransacao=" + dataTransacao + ", statusOperacao=" + statusOperacao + '}';
+        return "TransacoesEDepositos{" + "valorTransacao=" + valorTransacao + ", tipoOperacao=" + tipoOperacao + ", metodoPagamento=" + metodoPagamento + ", dataTransacao=" + dataTransacao + ", statusOperacao=" + statusOperacao + ", cliente=" + cliente + ", carteiraInvestimentos=" + carteiraInvestimentos + '}';
     }
-    
+
 }
+
 
     

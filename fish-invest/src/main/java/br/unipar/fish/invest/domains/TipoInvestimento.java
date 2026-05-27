@@ -14,7 +14,6 @@ public class TipoInvestimento extends BaseEntity {
     private String nomeTipo;
 
     public TipoInvestimento() {
-        super();
     }
 
     public TipoInvestimento(Integer id, String nomeTipo) {

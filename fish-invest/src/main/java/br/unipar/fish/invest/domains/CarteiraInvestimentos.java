@@ -4,46 +4,32 @@
  */
 package br.unipar.fish.invest.domains;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author user
  */
 public class CarteiraInvestimentos extends BaseEntity {
-    private String cliente;
-    private double tipoInvestimento;
+    
     private String nomeEspecifico;
-    private double valorTotalAcumulado; 
-    private double valorRendimento;
+    private BigDecimal saldoTotal;
+    private BigDecimal rendimentoAcumulado;
+    
+    private Cliente cliente;
+          
+    private TipoInvestimento tipoInvestimento;
 
     public CarteiraInvestimentos() {
         super();
     }
-    
-    public CarteiraInvestimentos(String cliente, double  tipoInvestimento, String nomeEspecifico, double valorTotalAcumulado, double valorRendimento,Integer id) {
-        
+
+    public CarteiraInvestimentos(String nomeEspecifico, BigDecimal saldoTotal, BigDecimal rendimentoAcumulado, Cliente cliente, TipoInvestimento tipoInvestimento, Integer id) {
         super(id);
-        this.cliente = cliente;
-        this.tipoInvestimento = tipoInvestimento;
         this.nomeEspecifico = nomeEspecifico;
-        this.valorTotalAcumulado = valorTotalAcumulado;
-        this.valorRendimento = valorRendimento;{
-   }
-        
-    }
-
-    public String getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(String cliente) {
+        this.saldoTotal = saldoTotal;
+        this.rendimentoAcumulado = rendimentoAcumulado;
         this.cliente = cliente;
-    }
-
-    public double getTipoInvestimento() {
-        return tipoInvestimento;
-    }
-
-    public void setTipoInvestimento(double tipoInvestimento) {
         this.tipoInvestimento = tipoInvestimento;
     }
 
@@ -55,26 +41,46 @@ public class CarteiraInvestimentos extends BaseEntity {
         this.nomeEspecifico = nomeEspecifico;
     }
 
-    public double getValorTotalAcumulado() {
-        return valorTotalAcumulado;
+    public BigDecimal getSaldoTotal() {
+        return saldoTotal;
     }
 
-    public void setValorTotalAcumulado(double valorTotalAcumulado) {
-        this.valorTotalAcumulado = valorTotalAcumulado;
+    public void setSaldoTotal(BigDecimal saldoTotal) {
+        this.saldoTotal = saldoTotal;
     }
 
-    public double getValorRendimento() {
-        return valorRendimento;
+    public BigDecimal getRendimentoAcumulado() {
+        return rendimentoAcumulado;
     }
 
-    public void setValorRendimento(double valorRendimento) {
-        this.valorRendimento = valorRendimento;
+    public void setRendimentoAcumulado(BigDecimal rendimentoAcumulado) {
+        this.rendimentoAcumulado = rendimentoAcumulado;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public TipoInvestimento getTipoInvestimento() {
+        return tipoInvestimento;
+    }
+
+    public void setTipoInvestimento(TipoInvestimento tipoInvestimento) {
+        this.tipoInvestimento = tipoInvestimento;
     }
 
     @Override
     public String toString() {
-        return "carteira_investimentos{" + "cliente=" + cliente + ", tipoInvestimento=" + tipoInvestimento + ", nomeEspecifico=" + nomeEspecifico + ", valorTotalAcumulado=" + valorTotalAcumulado + ", valorRendimento=" + valorRendimento + '}';
+        return "CarteiraInvestimentos{" + "nomeEspecifico=" + nomeEspecifico + ", saldoTotal=" + saldoTotal + ", rendimentoAcumulado=" + rendimentoAcumulado + ", cliente=" + cliente + ", tipoInvestimento=" + tipoInvestimento + '}';
     }
+
+        
     
-}     
+}
+
+   
 

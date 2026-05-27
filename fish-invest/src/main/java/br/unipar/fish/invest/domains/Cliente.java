@@ -4,6 +4,8 @@
  */
 package br.unipar.fish.invest.domains;
 
+import java.time.LocalDate;
+
 /**
  *
  * @author user
@@ -13,22 +15,21 @@ public class Cliente extends BaseEntity {
     private String email;
     private String senha;
     private String telefone;
-    private String codigoVerificacao;
+    private LocalDate dataCadastro;
 
     private PerfilInvestidor perfilInvestidor;
     private SegurancaAcesso segurancaAcesso;
 
     public Cliente() {
-        super();
     }
 
-    public Cliente(String nome, String email, String senha, String telefone, String codigoVerificacao, PerfilInvestidor perfilInvestidor, SegurancaAcesso segurancaAcesso, Integer id) {
+    public Cliente(String nome, String email, String senha, String telefone, LocalDate dataCadastro, PerfilInvestidor perfilInvestidor, SegurancaAcesso segurancaAcesso, Integer id) {
         super(id);
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.telefone = telefone;
-        this.codigoVerificacao = codigoVerificacao;
+        this.dataCadastro = dataCadastro;
         this.perfilInvestidor = perfilInvestidor;
         this.segurancaAcesso = segurancaAcesso;
     }
@@ -65,20 +66,13 @@ public class Cliente extends BaseEntity {
         this.telefone = telefone;
     }
 
-    public String getCodigoVerificacao() {
-        return codigoVerificacao;
-    }
-
-    public void setCodigoVerificacao(String codigoVerificacao) {
-        this.codigoVerificacao = codigoVerificacao;
-        
-        
-    }
-
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", codigoVerificacao=" + codigoVerificacao + ", perfilInvestidor=" + perfilInvestidor + ", segurancaAcesso=" + segurancaAcesso + '}';
+        return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", perfilInvestidor=" + perfilInvestidor + ", segurancaAcesso=" + segurancaAcesso + '}';
     }
-    
-    
+         
+
 }
+
+    
+

@@ -15,7 +15,7 @@ public class PerfilInvestidor extends BaseEntity {
     private String descricaoPerfil;
 
     public PerfilInvestidor() {
-        super();
+
     }
 
     public PerfilInvestidor(Integer id, String nomePerfil, String descricaoPerfil) {
