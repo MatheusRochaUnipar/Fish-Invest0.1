@@ -20,6 +20,7 @@ import java.util.ArrayList;
  *
  * @author matheus291107
  */
+
 public class ClienteRepository {
 
     private static final String INSERT =
@@ -46,6 +47,15 @@ public class ClienteRepository {
             + "pin_acesso, biometria_ativada, data_cadastro "
             + "FROM cliente "
             + "ORDER BY nome;";
+
+    private static final String FIND_BY_EMAIL =
+            "SELECT id_cliente, nome, email, senha, telefone, "
+            + "pin_acesso, biometria_ativada, data_cadastro "
+            + "FROM cliente "
+            + "WHERE email = ?;";
+
+    private static final String EXISTS_BY_EMAIL =
+            "SELECT COUNT(*) FROM cliente WHERE email = ?;";
 
 
     public Cliente inserir(Cliente cliente) throws SQLException {
@@ -173,6 +183,63 @@ public class ClienteRepository {
     }
 
 
+    public Cliente findByEmail(String email) throws SQLException {
+
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+        Cliente cliente = null;
+
+        try {
+            conn = new ConnectionFactory().getConnection();
+
+            pstm = conn.prepareStatement(FIND_BY_EMAIL);
+            pstm.setString(1, email);
+
+            rs = pstm.executeQuery();
+
+            if (rs.next()) {
+                cliente = montarCliente(rs);
+            }
+
+        } finally {
+            if (rs != null) rs.close();
+            if (pstm != null) pstm.close();
+            if (conn != null) conn.close();
+        }
+
+        return cliente;
+    }
+
+
+    public boolean existsByEmail(String email) throws SQLException {
+
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        ResultSet rs = null;
+
+        try {
+            conn = new ConnectionFactory().getConnection();
+
+            pstm = conn.prepareStatement(EXISTS_BY_EMAIL);
+            pstm.setString(1, email);
+
+            rs = pstm.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt(1) > 0;
+            }
+
+        } finally {
+            if (rs != null) rs.close();
+            if (pstm != null) pstm.close();
+            if (conn != null) conn.close();
+        }
+
+        return false;
+    }
+
+
     public ArrayList<Cliente> listarTodos() throws SQLException {
 
         Connection conn = null;
@@ -218,4 +285,4 @@ public class ClienteRepository {
 
         return cliente;
     }
-}
+} 

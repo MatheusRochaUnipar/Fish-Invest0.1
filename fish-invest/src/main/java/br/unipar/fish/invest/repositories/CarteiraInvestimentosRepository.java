@@ -5,11 +5,6 @@
 
 package br.unipar.fish.invest.repositories;
 
-/**
- *
- * @author matheus291107
- */
-
 import br.unipar.fish.invest.domains.CarteiraInvestimentos;
 import br.unipar.fish.invest.domains.Cliente;
 import br.unipar.fish.invest.domains.SegurancaAcesso;
@@ -21,6 +16,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+
+/**
+ *
+ * @author matheus291107
+ */
+
+
 
 public class CarteiraInvestimentosRepository {
 
