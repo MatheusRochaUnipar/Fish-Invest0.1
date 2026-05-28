@@ -7,4 +7,9 @@ C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\domains\TransacoesEDepositos.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\FishInvest.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\infraescture\ConnectionFactory.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\CarteiraInvestimentosRepository.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\ClienteRepository.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\PerfilInvestidorRepository.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\SegurancaAcessoRepository.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\TipoInvestimentoRepository.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\TransacoesEDepositosRepository.java

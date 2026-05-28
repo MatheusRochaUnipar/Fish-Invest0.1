@@ -66,12 +66,37 @@ public class Cliente extends BaseEntity {
         this.telefone = telefone;
     }
 
+    public LocalDate getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(LocalDate dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
+
+    public PerfilInvestidor getPerfilInvestidor() {
+        return perfilInvestidor;
+    }
+
+    public void setPerfilInvestidor(PerfilInvestidor perfilInvestidor) {
+        this.perfilInvestidor = perfilInvestidor;
+    }
+
+    public SegurancaAcesso getSegurancaAcesso() {
+        return segurancaAcesso;
+    }
+
+    public void setSegurancaAcesso(SegurancaAcesso segurancaAcesso) {
+        this.segurancaAcesso = segurancaAcesso;
+    }
+
     @Override
     public String toString() {
         return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", perfilInvestidor=" + perfilInvestidor + ", segurancaAcesso=" + segurancaAcesso + '}';
     }
-         
 
+    
+    
 }
 
     
