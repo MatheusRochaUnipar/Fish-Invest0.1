@@ -17,20 +17,18 @@ public class Cliente extends BaseEntity {
     private String telefone;
     private LocalDate dataCadastro;
 
-    private PerfilInvestidor perfilInvestidor;
     private SegurancaAcesso segurancaAcesso;
 
     public Cliente() {
     }
 
-    public Cliente(String nome, String email, String senha, String telefone, LocalDate dataCadastro, PerfilInvestidor perfilInvestidor, SegurancaAcesso segurancaAcesso, Integer id) {
+    public Cliente(String nome, String email, String senha, String telefone, LocalDate dataCadastro, SegurancaAcesso segurancaAcesso, Integer id) {
         super(id);
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.telefone = telefone;
         this.dataCadastro = dataCadastro;
-        this.perfilInvestidor = perfilInvestidor;
         this.segurancaAcesso = segurancaAcesso;
     }
 
@@ -74,14 +72,6 @@ public class Cliente extends BaseEntity {
         this.dataCadastro = dataCadastro;
     }
 
-    public PerfilInvestidor getPerfilInvestidor() {
-        return perfilInvestidor;
-    }
-
-    public void setPerfilInvestidor(PerfilInvestidor perfilInvestidor) {
-        this.perfilInvestidor = perfilInvestidor;
-    }
-
     public SegurancaAcesso getSegurancaAcesso() {
         return segurancaAcesso;
     }
@@ -92,8 +82,9 @@ public class Cliente extends BaseEntity {
 
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", perfilInvestidor=" + perfilInvestidor + ", segurancaAcesso=" + segurancaAcesso + '}';
+        return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", segurancaAcesso=" + segurancaAcesso + '}';
     }
+
 
     
     

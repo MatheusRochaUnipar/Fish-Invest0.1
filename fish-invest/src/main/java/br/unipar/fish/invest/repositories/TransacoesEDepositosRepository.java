@@ -11,7 +11,6 @@ package br.unipar.fish.invest.repositories;
 
 import br.unipar.fish.invest.domains.CarteiraInvestimentos;
 import br.unipar.fish.invest.domains.Cliente;
-import br.unipar.fish.invest.domains.PerfilInvestidor;
 import br.unipar.fish.invest.domains.SegurancaAcesso;
 import br.unipar.fish.invest.domains.TipoInvestimento;
 import br.unipar.fish.invest.domains.TransacoesEDepositos;
@@ -213,14 +212,6 @@ public class TransacoesEDepositosRepository {
 
     private TransacoesEDepositos montarTransacao(ResultSet rs) throws SQLException {
 
-        PerfilInvestidor perfil = null;
-        if (rs.getObject("id_perfil") != null) {
-            perfil = new PerfilInvestidor();
-            perfil.setId(rs.getInt("id_perfil"));
-            perfil.setNomePerfil(rs.getString("nome_perfil"));
-            perfil.setDescricaoPerfil(rs.getString("descricao_perfil"));
-        }
-
         SegurancaAcesso seguranca = new SegurancaAcesso();
         seguranca.setPinAcesso(rs.getString("pin_acesso"));
         seguranca.setBiometriaAtiva(rs.getBoolean("biometria_ativada"));
@@ -232,7 +223,6 @@ public class TransacoesEDepositosRepository {
         cliente.setSenha(rs.getString("senha"));
         cliente.setTelefone(rs.getString("telefone"));
         cliente.setDataCadastro(rs.getDate("data_cadastro").toLocalDate());
-        cliente.setPerfilInvestidor(perfil);
         cliente.setSegurancaAcesso(seguranca);
 
         TipoInvestimento tipo = new TipoInvestimento();
