@@ -1,8 +1,11 @@
 br\unipar\fish\invest\domains\TransacoesEDepositos.class
 br\unipar\fish\invest\repositories\TipoInvestimentoRepository.class
+br\unipar\fish\invest\services\TransacoesEDepositosService.class
+br\unipar\fish\invest\services\TipoInvestimentoService.class
 br\unipar\fish\invest\domains\CarteiraInvestimentos.class
 br\unipar\fish\invest\domains\SegurancaAcesso.class
 br\unipar\fish\invest\repositories\CarteiraInvestimentosRepository.class
+br\unipar\fish\invest\services\CarteiraInvestimentosService.class
 br\unipar\fish\invest\domains\Cliente.class
 br\unipar\fish\invest\infraescture\ConnectionFactory.class
 br\unipar\fish\invest\domains\BaseEntity.class

@@ -10,4 +10,7 @@ C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\ClienteRepository.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\TipoInvestimentoRepository.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\repositories\TransacoesEDepositosRepository.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\services\CarteiraInvestimentosService.java
 C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\services\ClienteService.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\services\TipoInvestimentoService.java
+C:\Matheus-POO\Fish-Invest-main\fish-invest\src\main\java\br\unipar\fish\invest\services\TransacoesEDepositosService.java
