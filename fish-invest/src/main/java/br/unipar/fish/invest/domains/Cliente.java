@@ -12,6 +12,7 @@ import java.time.LocalDate;
  */
 public class Cliente extends BaseEntity {
     private String nome;
+    private String cpf;
     private String email;
     private String senha;
     private String telefone;
@@ -22,9 +23,10 @@ public class Cliente extends BaseEntity {
     public Cliente() {
     }
 
-    public Cliente(String nome, String email, String senha, String telefone, LocalDate dataCadastro, SegurancaAcesso segurancaAcesso, Integer id) {
+    public Cliente(String nome, String cpf, String email, String senha, String telefone, LocalDate dataCadastro, SegurancaAcesso segurancaAcesso, Integer id) {
         super(id);
         this.nome = nome;
+        this.cpf = cpf;
         this.email = email;
         this.senha = senha;
         this.telefone = telefone;
@@ -38,6 +40,14 @@ public class Cliente extends BaseEntity {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 
     public String getEmail() {
@@ -82,11 +92,9 @@ public class Cliente extends BaseEntity {
 
     @Override
     public String toString() {
-        return "Cliente{" + "nome=" + nome + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", segurancaAcesso=" + segurancaAcesso + '}';
+        return "Cliente{" + "nome=" + nome + ", cpf=" + cpf + ", email=" + email + ", senha=" + senha + ", telefone=" + telefone + ", dataCadastro=" + dataCadastro + ", segurancaAcesso=" + segurancaAcesso + '}';
     }
 
-
-    
     
 }
 

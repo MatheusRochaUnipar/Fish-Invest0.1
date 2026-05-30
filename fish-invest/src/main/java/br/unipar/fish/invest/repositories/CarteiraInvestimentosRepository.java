@@ -10,6 +10,7 @@ import br.unipar.fish.invest.domains.Cliente;
 import br.unipar.fish.invest.domains.SegurancaAcesso;
 import br.unipar.fish.invest.domains.TipoInvestimento;
 import br.unipar.fish.invest.infraescture.ConnectionFactory;
+import br.unipar.fish.invest.repositories.interfaces.CarteiraInvestimentosRepositoryInterface;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -24,7 +25,7 @@ import java.util.ArrayList;
 
 
 
-public class CarteiraInvestimentosRepository {
+public class CarteiraInvestimentosRepository implements CarteiraInvestimentosRepositoryInterface{
 
     private static final String INSERT =
             "INSERT INTO carteira_investimentos (id_cliente, id_tipo_investimento, "
